@@ -1,0 +1,231 @@
+:root {
+  --g: #1f7a4d;
+  --g2: #165c39;
+  --lt: #eef8f2;
+  --mint: #d3ecdd;
+  --ink: #14231b;
+  --mut: #5b6f63;
+  --line: #ddebe2;
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  --hero:
+    radial-gradient(circle at 80% 20%, #8fd1a9 0, transparent 45%),
+    url("assets/images.jpg");
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+body {
+  font-family: Poppins, system-ui, sans-serif;
+  background: #fff;
+  color: var(--ink);
+  line-height: 1.7;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.sec {
+  padding: 84px 0;
+}
+.alt {
+  background: var(--lt);
+}
+.mut {
+  color: var(--mut);
+}
+h2.t {
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 600;
+}
+.sub {
+  color: var(--mut);
+  max-width: 620px;
+  margin-top: 12px;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 26px;
+}
+.lift {
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px -20px rgba(22, 92, 57, 0.35);
+}
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 1.5px solid transparent;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.b1 {
+  background: var(--g);
+  color: #fff;
+}
+.b1:hover {
+  background: var(--g2);
+}
+.b2 {
+  border-color: #fff;
+  color: #fff;
+}
+.b2:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+.b3 {
+  background: #fff;
+  color: var(--g2);
+}
+.b3:hover {
+  background: var(--lt);
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--g);
+  outline-offset: 3px;
+}
+.nav a.l {
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  opacity: 0.92;
+}
+.nav a.l:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.ico {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: var(--lt);
+  color: var(--g);
+}
+svg.i {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.ph {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--mut);
+  background: var(--lt);
+  border: 2px dashed #b9dcc8;
+  border-radius: 14px;
+}
+.av {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  flex: none;
+}
+.hero {
+  background-image:
+    linear-gradient(rgba(10, 58, 34, 0.58), rgba(10, 58, 34, 0.68)), var(--hero);
+  background-size: cover;
+  background-position: center;
+}
+.field {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #cfe3d6;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 0.95rem;
+  background: #fff;
+  color: var(--ink);
+}
+.field:focus {
+  outline: none;
+  border-color: var(--g);
+  box-shadow: 0 0 0 4px rgba(31, 122, 77, 0.14);
+}
+.field.bad {
+  border-color: #b91c1c;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+th {
+  background: var(--lt);
+  text-align: left;
+  font-weight: 600;
+}
+th,
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.tick li {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.tick li:before {
+  content: "";
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: var(--g)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5'%3E%3Cpath d='M6 12l4 4 8-9'/%3E%3C/svg%3E")
+    center/12px no-repeat;
+}
+.rise {
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  .lift:hover {
+    transform: none;
+  }
+}
